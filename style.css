@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--dark-grayish-blue);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--grayish-blue);
+  text-align: center;
+  padding: 3rem 1.25rem 1.85rem;
+  border-radius: 0.825rem;
+  margin-bottom: 3rem;
+}
+
+.container h1 {
+  color: var(--neon-green);
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.container p {
+  font-size: 28px;
+  color: var(--light-cyan);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.container picture img {
+  margin-bottom: 1.85rem;
+}
+
+.container picture {
+  position: relative;
+}
+
+.container picture::after {
+  content: " ";
+  position: absolute;
+  background-color: var(--light-cyan);
+  height: 1px;
+  width: 40%;
+  left: 0;
+  bottom: 2.75rem;
+  z-index: 99;
+}
+.container picture::before {
+  content: " ";
+  position: absolute;
+  background-color: var(--light-cyan);
+  height: 1px;
+  width: 40%;
+  right: 0;
+  bottom: 2.75rem;
+  z-index: 99;
+}
+
+.btn button {
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+}
+
+.btn button:hover {
+  box-shadow: 0 0 20px 5px hsl(150, 100%, 66%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: var(--neon-green);
+}
+
+@media (min-width: 540px) {
+  .container {
+    max-width: 540px;
+    margin: 3rem;
+  }
+}
